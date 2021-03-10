@@ -28,14 +28,14 @@ steps:
 - script: yarn config set cache-folder $(yarnCacheFolder)
   displayName: 'yarn config set cache-folder'
 
-- task: Cache@2
-  inputs:
-    key: 'version1 | yarn | "$(Agent.OS)" | yarn.lock'
-    restoreKeys: |
-       version1 | yarn | "$(Agent.OS)"
-       version1 | yarn
-    path: $(yarnCacheFolder)
-  displayName: 'restore Yarn packages from cache'
+# - task: Cache@2
+#   inputs:
+#     key: 'version1 | yarn | "$(Agent.OS)" | yarn.lock'
+#     restoreKeys: |
+#        version1 | yarn | "$(Agent.OS)"
+#        version1 | yarn
+#     path: $(yarnCacheFolder)
+#   displayName: 'restore Yarn packages from cache'
 
 - script: yarn config set version-git-tag false
   displayName: 'yarn config set version-git-tag false'
