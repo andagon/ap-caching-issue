@@ -13,6 +13,7 @@ variables:
   yarnCacheFolder: $(Pipeline.Workspace)/.yarn
   majorVersion: '0'
   minorVersion: '1'
+  System.Debug: true
 
 name: $(majorVersion).$(minorVersion)$(Rev:.r)
 
